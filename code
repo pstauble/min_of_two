@@ -1,0 +1,21 @@
+text_file=open("abbeytext.txt","r") #Saved the data as a txt file because input was in columns
+numbers= text_file.read()
+numbers=numbers.split()
+number_list=[]
+for i in numbers:
+	number_list.append(int(i))
+n=raw_input("Please insert N ")
+n=int(n)
+n_mod=n+1
+result=[]
+for i in range(1,n_mod):
+	if number_list[0] > number_list[1]:
+		result.append(number_list[1])
+	else:
+		result.append(number_list[0])
+	del number_list[0]
+	del number_list[0]
+	
+
+for i in result:
+	print i,
